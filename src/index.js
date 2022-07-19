@@ -1,33 +1,40 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+function Card(props) {
+  return (
+    <div>
+      <h2>{props.name}</h2>
+      <img src={props.img} width="60%" alt="avatar_img" />
+      <p>{props.tel}</p>
+      <p>{props.email}</p>
+    </div>
+  );
+}
+
 ReactDOM.render(
   <div>
     <h1>My Contacts</h1>
 
-    <h2>Beyonce</h2>
-    <img
-      src="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
-      alt="avatar_img"
+    <Card
+      name="Luz Noceda"
+      img="https://ucarecdn.com/1c255ef7-533e-4f74-8ada-e403d5c5d959/-/progressive/yes/-/format/auto/"
+      tel="+123 456 7890"
+      email="luz@toh.com"
     />
-    <p>+123 456 789</p>
-    <p>b@beyonce.com</p>
 
-    <h2>Jack Bauer</h2>
-    <img
-      src="https://pbs.twimg.com/profile_images/625247595825246208/X3XLea04_400x400.jpg"
-      alt="avatar_img"
+    <Card
+      name="Eda Clawthorne"
+      img="https://i.pinimg.com/564x/69/8d/4c/698d4cfe112127e62b58dee95820c8c2.jpg"
+      tel="+123 456 7890"
+      email="owllady@toh.com"
     />
-    <p>+987 654 321</p>
-    <p>jack@nowhere.com</p>
-
-    <h2>Chuck Norris</h2>
-    <img
-      src="https://i.pinimg.com/originals/e3/94/47/e39447de921955826b1e498ccf9a39af.png"
-      alt="avatar_img"
+    <Card
+      name="Hooty"
+      img="https://steamuserimages-a.akamaihd.net/ugc/1702911301182996387/14681D67DA4533E5DEBE7F4A1C5A3647610E5092/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+      tel="+123 456 7890"
+      email="hoothoot@toh.com"
     />
-    <p>+918 372 574</p>
-    <p>gmail@chucknorris.com</p>
   </div>,
   document.getElementById("root")
 );
